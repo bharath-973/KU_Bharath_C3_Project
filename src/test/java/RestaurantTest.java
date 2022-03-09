@@ -89,7 +89,7 @@ class RestaurantTest {
         if (temp != null)
             selectedItems.add(temp);
         int totalCost = restaurant.getTotalCostOfItems(selectedItems);
-        assertEquals(totalCost, 300);
+        assertEquals(totalCost, 388);
 
         //Add more item and check the sum again
         restaurant.addToMenu("Paneer masala", 300);
@@ -97,6 +97,6 @@ class RestaurantTest {
         if (temp != null)
             selectedItems.add(temp);
         totalCost = restaurant.getTotalCostOfItems(selectedItems);
-        assertEquals(totalCost, 600);
+        assertEquals(totalCost, 688);
     }
 }

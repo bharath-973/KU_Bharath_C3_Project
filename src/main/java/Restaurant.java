@@ -34,14 +34,13 @@ public class Restaurant {
 
 
 
-    private Item findItemByName(String itemName){
+    Item findItemByName(String itemName){
         for(Item item: menu) {
             if(item.getName().equals(itemName))
                 return item;
         }
         return null;
     }
-
     public void addToMenu(String name, int price) {
         Item newItem = new Item(name,price);
         menu.add(newItem);
@@ -66,6 +65,17 @@ public class Restaurant {
 
     public String getName() {
         return name;
+    }
+
+    //Method to compute Cost of all the Menu Items in a restaurant
+    public int getTotalCostOfItems(List<Item> selectedItems){
+        int totalCost = 0;
+        for(Item item: selectedItems) {
+            totalCost += item.getPrice();
+        }
+        return  totalCost;
+
+
     }
 
 }
